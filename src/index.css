@@ -1,1 +1,56 @@
 @import "tailwindcss";
+
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Logo Colors*/
+    --brand-red: 255 11 0;    /* #FF0B00 */
+    --brand-blue: 22 45 74;   /* #162D4A */
+    --brand-white: 255 255 255; /* #FFFFFF */
+    --brand-red-dark: 224 10 0; /* #E00A00 */ 
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    @apply bg-white text-[rgb(var(--brand-blue))];
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'PT Serif Caption', serif;
+    @apply font-semibold text-[rgb(var(--brand-blue))];
+  }
+
+  p {
+    font-family: 'Poppins', sans-serif;
+    @apply text-gray-700 leading-relaxed;
+  }
+
+  ::selection {
+    @apply bg-[rgb(var(--brand-red))] text-white;
+  }
+}
+
+@layer components {
+  .custom-container {
+    max-width: 1320px;       /* max width you want */
+    margin-inline: auto;     /* center horizontally */
+    padding-inline: 1rem;    /* optional padding on left/right */
+  }
+
+}  
+
+@layer utilities {
+  @media (max-width: 380px) {
+    .arrow2{
+      width: 3rem;
+    }
+  }
+}
+
+/*swiper css */
+.swiper-pagination-bullet-active {
+  background: rgb(220, 38, 38) !important; 
+  transform: scale(1.25);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}

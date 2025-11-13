@@ -1,10 +1,12 @@
 import React from 'react'
-import Header from '../Components/Header'
+import Hero from "../Components/Hero"
 
 export default function Home() {
   return (
     <div>
-        <Header/>
+      <Hero />
     </div>
   )
 }
+
+// style={{ background: "linear-gradient(to left, #FFFFFF, #F1F1F1)" }}
